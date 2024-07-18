@@ -1,4 +1,4 @@
-import { Box, Container, Typography } from '@mui/material'
+import { Box, CardContent, Container, Typography } from '@mui/material'
 import React from 'react'
 import poster1 from '../../assets/images/home/Poster/poster1.webp'
 import ContentCopyIcon from '@mui/icons-material/ContentCopy';

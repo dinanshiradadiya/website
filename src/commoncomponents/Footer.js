@@ -17,7 +17,7 @@ function Footer() {
     return (
         <div>
             <Container maxWidth="xl">
-                <Box sx={{ flexGrow: 1 }} color={"gray"} padding={"100px 20px"}>
+                <Box sx={{ flexGrow: 1 }} color={"gray"} padding={"80px 0 50px 20px"}>
                     <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }} justifyContent={"center"} display={"flex"}>
                         <Grid item xs={12} md={4} lg={2} width={"100%"}>
                             <Typography variant="h5" component="h2" color={"black"} fontWeight={"600"} padding={"0 0 20px 0"} fontSize={"23px"}>Information</Typography>
@@ -76,7 +76,7 @@ function Footer() {
                     </Grid>
                 </Box>
             </Container>
-            <Box className='line' marginTop={"70px"}></Box>
+            <Box className='line'></Box>
             <Typography color={"gray"} textAlign={"center"} marginBottom={"20px"} marginTop={"40px"}>Copyright  2023 by qodexTM</Typography>
         </div>
     )

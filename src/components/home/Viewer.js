@@ -1,9 +1,155 @@
-import React from 'react'
-import { Avatar, Box, Stack, Typography } from '@mui/material';
-import Rating from '@mui/material/Rating';
+// import React from 'react'
+// import { Avatar, Box, Container, Stack, Typography } from '@mui/material';
+// import Rating from '@mui/material/Rating';
+// import Slider from 'react-slick';
+// import 'slick-carousel/slick/slick.css';
+// import 'slick-carousel/slick/slick-theme.css';
+// import sliderImg1 from "../../assets/images/home/slider/sliderImg_1.png"
+// import sliderImg2 from "../../assets/images/home/slider/sliderImg_2.png"
+// import sliderImg3 from "../../assets/images/home/slider/sliderImg_3.png"
 
+// function Viewer() {
+//     const settings = {
+//         dots: false,
+//         infinite: true,
+//         speed: 500,
+//         slidesToShow: 3,
+//         slidesToScroll: 1,
+//         responsive: [
+//             {
+//                 breakpoint: 1024,
+//                 settings: {
+//                     slidesToShow: 3,
+//                     slidesToScroll: 1,
+//                     infinite: true,
+//                     dots: true
+//                 }
+//             },
+//             {
+//                 breakpoint: 768,
+//                 settings: {
+//                     slidesToShow: 2,
+//                     slidesToScroll: 1
+//                 }
+//             },
+//             {
+//                 breakpoint: 480,
+//                 settings: {
+//                     slidesToShow: 1,
+//                     slidesToScroll: 1
+//                 }
+//             }
+//         ]
+//     };
+//     return (
+//         <div>
+//             <Box textAlign={"center"} display={'flex'} justifyContent={'center'} marginTop={10} paddingTop={"100px"} gap={2}>
+//                 <Typography sx={{ fontSize: 40, fontWeight: 600 }}>Happy client</Typography>
+//                 <Typography sx={{ fontSize: 40, fontFamily: "'Marcellus', sans-serif" }}>quotes</Typography>
+//             </Box>
+//             <Box display={'flex'} justifyContent={'center'} gap={3} marginTop={5}>
+//                 <Stack spacing={1}>
+//                     <Rating name="half-rating-read" defaultValue={5} precision={0.5} readOnly />
+//                 </Stack>
+//                 <Typography>/ 04 Comment</Typography>
+//             </Box>
+//             <Box textAlign={'center'} marginTop={5}>
+//                 <Typography color={"#808080"} lineHeight={2}>There are many variations of passages of lorem Ipsum available, but the majority have an
+//                     <br />suffered alteration in some form, by injected humour, or randomised words which don't a look
+//                     <br />even slightly believable.</Typography>
+//             </Box>
+//             <Box textAlign={'center'} marginTop={5}>
+//                 <img src='https://qx-aolie.myshopify.com/cdn/shop/files/quotes-icon.png?v=1696573837&width=832' width={50} height={50} />
+//             </Box>
+//             <Box >
+//                 <Stack>
+//                     <Container maxWidth={"sm"}>
+//                         <Box>
+//                             <Slider {...settings}>
+//                                 <Box sx={{ display: "flex", justifyContent: "center " }}>
+//                                     <img src={sliderImg1} alt="" style={{ width: "60%" }} />
+//                                     <Typography variant='h6' color={"#b2905f"} fontFamily={'Holligate Signature Demo'}>Jack Aranda</Typography>
+//                                     <Typography fontWeight={600}>Store owner</Typography>
+//                                 </Box>
+//                                 <Box>
+//                                     <img src={sliderImg2} alt="" style={{ width: "60%" }} />
+//                                     <Typography variant='h6' color={"#b2905f"} fontFamily={'Holligate Signature Demo'}>Jack Aranda</Typography>
+//                                     <Typography fontWeight={600}>Store owner</Typography>
+//                                 </Box>
+//                                 <Box>
+//                                     <img src={sliderImg3} alt="" style={{ width: "60%" }} />
+//                                     <Typography variant='h6' color={"#b2905f"} fontFamily={'Holligate Signature Demo'}>Jack Aranda</Typography>
+//                                     <Typography fontWeight={600}>Store owner</Typography>
+//                                 </Box>
+//                             </Slider>
+//                         </Box>
+//                     </Container>
+//                 </Stack>
+//             </Box>
+//         </div>
+//     )
+// }
+
+// export default Viewer;
+
+
+import React, { useRef } from 'react';
+import { Avatar, Box, Container, Stack, Typography, Button } from '@mui/material';
+import Rating from '@mui/material/Rating';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import sliderImg1 from "../../assets/images/home/slider/sliderImg_1.png";
+import sliderImg2 from "../../assets/images/home/slider/sliderImg_2.png";
+import sliderImg3 from "../../assets/images/home/slider/sliderImg_3.png";
+import EastIcon from '@mui/icons-material/East';
+import KeyboardBackspaceIcon from '@mui/icons-material/KeyboardBackspace';
+import { useNavigate } from 'react-router-dom';
 
 function Viewer() {
+    const sliderRef = useRef(null);
+
+    const settings = {
+        dots: false,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: true,
+                },
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                },
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                },
+            },
+        ],
+    };
+
+    const next = () => {
+        sliderRef.current.slickNext();
+    };
+
+    const previous = () => {
+        sliderRef.current.slickPrev();
+    };
+
     return (
         <div>
             <Box textAlign={"center"} display={'flex'} justifyContent={'center'} marginTop={10} paddingTop={"100px"} gap={2}>
@@ -17,40 +163,46 @@ function Viewer() {
                 <Typography>/ 04 Comment</Typography>
             </Box>
             <Box textAlign={'center'} marginTop={5}>
-                <Typography color={"#808080"} lineHeight={2}>There are many variations of passages of lorem Ipsum available, but the majority have an
+                <Typography color={"#808080"} lineHeight={2}>
+                    There are many variations of passages of lorem Ipsum available, but the majority have an
                     <br />suffered alteration in some form, by injected humour, or randomised words which don't a look
-                    <br />even slightly believable.</Typography>
+                    <br />even slightly believable.
+                </Typography>
             </Box>
             <Box textAlign={'center'} marginTop={5}>
-               <img src='https://qx-aolie.myshopify.com/cdn/shop/files/quotes-icon.png?v=1696573837&width=832' width={50} height={50}/>
-            </Box>   
-            <Box >
-                <Stack>
-                 <Box display={'flex'} justifyContent={'center'} marginTop={5} gap={5}>
-                    <Avatar
-                        src="https://qx-aolie.myshopify.com/cdn/shop/files/testi-04.png?v=1696573757&width=512"
-                        sx={{ width:75, height:75 }}
-                    />
-                     <Avatar
-                        src="https://qx-aolie.myshopify.com/cdn/shop/files/testi-01.png?v=1696573758&width=512"
-                        sx={{ width:80, height:80 }}
-                    />
-                     <Avatar
-                        src="https://qx-aolie.myshopify.com/cdn/shop/files/testi-02.png?v=1696573757&width=512"
-                        sx={{ width:75, height:75 }}
-                    />
-                    </Box>
-                </Stack>
-            </Box>
-            <Box marginTop={3}>
-                <Typography variant='h6' textAlign={'center'} color={"#b2905f"} fontFamily={'Holligate Signature Demo'}>Jack Aranda</Typography>
+                <img src='https://qx-aolie.myshopify.com/cdn/shop/files/quotes-icon.png?v=1696573837&width=832' width={50} height={50} />
             </Box>
             <Box>
-                <Typography textAlign={"center"} fontWeight={600}>Store owner</Typography>
+                <Stack>
+                    <Container maxWidth={"sm"}>
+                        <Box sx={{marginTop:"30px"}}>
+                            <Slider ref={sliderRef} {...settings}>
+                                <Box sx={{ display: "flex", justifyContent: "center " }}>
+                                    <img src={sliderImg1} alt="" style={{ width: "60%" }} />
+                                    <Typography variant='h6' color={"#b2905f"} fontFamily={'Holligate Signature Demo'}>Lisa Resnick</Typography>
+                                    <Typography fontWeight={600}>Store customer</Typography>
+                                </Box>
+                                <Box>
+                                    <img src={sliderImg2} alt="" style={{ width: "60%" }} />
+                                    <Typography variant='h6' color={"#b2905f"} fontFamily={'Holligate Signature Demo'}>Jack Aranda</Typography>
+                                    <Typography fontWeight={600}>Store owner</Typography>
+                                </Box>
+                                <Box>
+                                    <img src={sliderImg3} alt="" style={{ width: "60%" }} />
+                                    <Typography variant='h6' color={"#b2905f"} fontFamily={'Holligate Signature Demo'}>Jillian Wyatt</Typography>
+                                    <Typography fontWeight={600}>Store owner</Typography>
+                                </Box>
+                            </Slider>
+                            <Box sx={{display:"flex",justifyContent:"space-between",color:"#B2905F",transform:"translateY(-1100%)"}} marginTop={2}>
+                                <Box variant="contained" onClick={previous} sx={{transform:"translateX(-1400%)"}}><KeyboardBackspaceIcon></KeyboardBackspaceIcon></Box>
+                                <Box variant="contained" onClick={next}  sx={{transform:"translateX(1400%)"}}><EastIcon></EastIcon></Box>
+                            </Box>
+                        </Box>
+                    </Container>
+                </Stack>
             </Box>
-
         </div>
-    )
+    );
 }
 
-export default Viewer
+export default Viewer;
