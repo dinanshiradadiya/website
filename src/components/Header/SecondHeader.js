@@ -12,6 +12,7 @@ import Drawer from '@mui/material/Drawer';
 import List from '@mui/material/List';
 import ListItemText from '@mui/material/ListItemText';
 import CloseIcon from '@mui/icons-material/Close';
+import { Navigate, useNavigate } from 'react-router-dom';
 
 function SecondHeader(props) {
 
@@ -24,6 +25,7 @@ function SecondHeader(props) {
         setMobileOpen((prevState) => !prevState);
     };
 
+    const navigate = useNavigate()
 
     const drawer = (
         <Box onClick={handleDrawerToggle} sx={{ textAlign: 'end', padding: "10px" }}>
@@ -52,7 +54,7 @@ function SecondHeader(props) {
                 <Grid item xs={12} lg={6} sx={{ display: { sx: "none", sm: "none", md: "none", lg: "block", }  }} >
                     <Box sx={{ display: "flex", alignItems: "center", position: "relative" }}>
                         <Typography sx={{ display: "flex", padding:"20px 0", alignItems:"center", fontWeight: "600", fontSize: "16px", color: "#333333" }} id="Nav">
-                            <Typography px={2} sx={{ "&:hover":{color:"#B2905F", transition:".5s"}}}>HOME</Typography>
+                            <Typography px={2} sx={{ "&:hover":{color:"#B2905F", transition:".5s"}}} onClick={()=>navigate("product1")}>HOME</Typography>
                             <Typography px={2} sx={{ "&:hover":{color:"#B2905F", transition:".5s"}}}>PRODUCT</Typography>
                             <Typography px={2} className='menu'
                                 sx={{ display:"flex",
