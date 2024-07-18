@@ -1,0 +1,39 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.css-1naehiv-MuiInputBase-root .MuiInputBase-input{
+  padding: 10px 10px 10px 0 !important;
+}
+.MuiBox-root
+{
+  font-family: 'Times New Roman', Times, serif;
+}
+#BTN{
+  color: #fff;
+  border-radius: 0;
+  padding: 10px 15px;
+  font-size: 18px;
+  font-family: "Open Sans", sans-serif;
+  margin-top: 10px;
+}
+
+#SerchBar{
+  border-bottom: 1px solid rgba(104, 103, 103, 0.24);
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+#Animation{
+  animation:  blinker 1.0s infinite;
+}
