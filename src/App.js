@@ -1,26 +1,29 @@
 import React from 'react'
-import Home from './pages/Home'
-import Product1 from './pages/Product1'
-import Blogs from './pages/Blogs'
-import Collection from './pages/Collection'
-import { Routes, Route} from 'react-router-dom'
+import Navbar from './components/Navbar'
+import Navbar2 from './components/Navbar2'
+
+import Container1 from './components/Container1'
+import Shopby from './components/Shopby'
+import Brand from './components/Brand'
+import Banner from './components/Banner'
+import Dealof from './components/Dealof'
+import Aboutus from './components/pages/Aboutus'
+import Privacypolicy from './components/pages/Privacypolicy'
+
 
 function App() {
   return (
-    <div>
-      {/* <Home /> */}
-      {/* <Product1 /> */}
-        {/* <Collection /> */}
-      {/* <Blogs /> */}
-      {/* <Footer /> */}
-
-      <Routes>
-        <Route path='/' element={<Home />}></Route>
-        <Route path='/product1' element={<Product1 />}></Route>
-        <Route path='/collection' element={<Collection />}></Route>
-        <Route path='/blogs' element={<Blogs />}></Route>
-      </Routes>
-    </div>
+    <>
+      {/* <Navbar />
+      <Navbar2 />
+      <Container1 />
+      <Shopby />
+      <Brand />
+      <Banner />*/}
+      {/* <Dealof />  */}
+      {/* <Aboutus /> */}
+      <Privacypolicy />
+    </>
   )
 }
 
