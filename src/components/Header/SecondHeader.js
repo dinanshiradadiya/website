@@ -48,16 +48,16 @@ function SecondHeader(props) {
         <div style={{ borderBottom: "1px solid #33333338" }}>
             <Container maxWidth >
                 <Grid container item xs={12} sx={{ display: "flex", justifyContent: "space-between", padding: "20px" }} >
-                    <Grid item xs={12} sm={6} lg={1} style={{ display: "flex", alignItems: "center" }} >
+                    <Grid item xs={12} sm={4} lg={1} style={{ display: "flex", alignItems: "center" }} >
                         <Box><img src={Logo} alt="" width={"120px"} /></Box>
                     </Grid>
-                    <Grid item xs={12} lg={6} sx={{ display: { sx: "none", sm: "none", md: "none", lg: "block", } }} >
+                    <Grid item xs={12} lg={6} sx={{ display: { xs: "none", sm: "none", md: "none", lg: "block", } }} >
                         <Box sx={{ display: "flex", alignItems: "center", position: "relative" }}>
                             <Typography sx={{ display: "flex", padding: "20px 0", alignItems: "center", fontWeight: "600", fontSize: "16px", color: "#333333" }} id="Nav">
-                                <Typography px={2} sx={{ "&:hover": { color: "#B2905F", transition: ".5s" } }} onClick={() => navigate("/")}>HOME</Typography>
-                                <Typography px={2} sx={{ "&:hover": { color: "#B2905F", transition: ".5s" } }} onClick={() => navigate("/product1")}>PRODUCT</Typography>
+                                <Typography px={2} sx={{fontWeight:"600", "&:hover": { color: "#B2905F", transition: ".5s" } }} onClick={() => navigate("/")}>HOME</Typography>
+                                <Typography px={2} sx={{ fontWeight:"600", "&:hover": { color: "#B2905F", transition: ".5s" } }} onClick={() => navigate("/product1")}>PRODUCT</Typography>
                                 <Typography px={2} className='menu'
-                                    sx={{
+                                    sx={{fontWeight:"600",
                                         display: "flex",
                                         "&:hover":
                                         {
@@ -95,9 +95,9 @@ function SecondHeader(props) {
                                         </Typography>
                                     </Grid>
                                 </Typography>
-                                <Typography px={2} sx={{ "&:hover": { color: "#B2905F", transition: ".5s" } }} onClick={()=>navigate("/blogs")}>BLOG</Typography>
+                                <Typography px={2} sx={{ fontWeight:"600","&:hover": { color: "#B2905F", transition: ".5s" } }} onClick={()=>navigate("/blogs")}>BLOG</Typography>
                                 <Typography px={2} className='menu'
-                                    sx={{
+                                    sx={{fontWeight:"600",
                                         display: "flex", position: "relative",
                                         "&:hover": {
                                             color: "#B2905F",
@@ -109,7 +109,7 @@ function SecondHeader(props) {
                                         }
                                     }}
                                 >PAGS <KeyboardArrowDownIcon></KeyboardArrowDownIcon>
-                                    <Typography className='subMenu' sx={{ whiteSpace: "nowrap", position: "absolute", top: "100%", left: "0", visibility: "hidden", opacity: "0", boxShadow: "0 0 10px #00000026", backgroundColor: "#fff", padding: "30px 30px 0" }}>
+                                    <Typography className='subMenu' sx={{fontWeight:"600", whiteSpace: "nowrap", position: "absolute", top: "100%", left: "0", visibility: "hidden", opacity: "0", boxShadow: "0 0 10px #00000026", backgroundColor: "#fff", padding: "30px 30px 0" }}>
                                         <ListItem xs={{ padding: "12px 30px 0" }}>About us</ListItem>
                                         <ListItem xs={{ padding: "12px 30px 0" }}>Contact us</ListItem>
                                         <ListItem xs={{ padding: "12px 30px 0" }}>Faqs</ListItem>
@@ -124,21 +124,21 @@ function SecondHeader(props) {
                             <Typography sx={{ fontSize: "60px", display: { sx: "block", sm: "block", md: "block", lg: "none" } }}></Typography>
                         </Box>
                     </Grid>
-                    <Grid item xs={12} sm={6} lg={4} sx={{ display: "flex", alignItems: "center", justifyContent: "end" }} >
+                    <Grid item xs={12} sm={4} lg={4} sx={{ display: "flex", alignItems: "center", justifyContent: "end" }} >
                         <Box sx={{ display: "flex", color: "#333333" }}>
                             <Typography aria-label="open drawer"
                                 edge="start"
                                 onClick={handleDrawerToggle} sx={{ display: { sx: "block", sm: "block", md: "block", lg: "none" }, padding: "0 15px" }}><MenuIcon /></Typography>
-                            <Typography ><SearchIcon sx={{ fontSize: "23px" }}></SearchIcon></Typography>
-                            <Typography><PermIdentityIcon sx={{ fontSize: "23px", margin: "0 20px" }}></PermIdentityIcon></Typography>
-                            <Typography><FavoriteBorderIcon sx={{ fontSize: "23px", margin: "0 20px" }}></FavoriteBorderIcon></Typography>
+                            <Typography ><SearchIcon sx={{ fontSize: "23px" ,  margin: "0 15px",color:"#33333378" }}></SearchIcon></Typography>
+                            <Typography><PermIdentityIcon sx={{ fontSize: "23px", margin: "0 15px", color:"#33333378" }}></PermIdentityIcon></Typography>
+                            <Typography><FavoriteBorderIcon sx={{ fontSize: "23px", margin: "0 15px", color:"#33333378" }}></FavoriteBorderIcon></Typography>
                             <Typography sx={{
                                 backgroundColor: "#000", width: "25px", height: "26px", borderRadius: "50%", justifyContent: "center", alignItems: "center", display: "flex", color: "#fff", marginLeft: "10px", transition: ".5S", "&:hover": {
                                     backgroundColor: "#B2905F",
                                 }
                             }}>0</Typography>
                         </Box>
-                        <Box sx={{ backgroundColor: "#B2905F", display: "flex", color: "#fff", alignItems: "center", margin: "0 0 0 20px", padding: "7px 13px 7px 13px" }}>
+                        <Box  sx={{ backgroundColor: "#B2905F", color: "#fff", alignItems: "center", margin: "0 0 0 20px", padding: "7px 13px 7px 13px" , display: { xs: "none", sm: "none", md: "flex", lg: "flex", }}}>
                             <Typography><WorkOutlineIcon /></Typography>
                             <Typography sx={{ margin: "0 5px 0 13px", whiteSpace: "nowrap" }}>My Cart</Typography>
                             <Typography className='zero' sx={{

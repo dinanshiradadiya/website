@@ -11,7 +11,7 @@ function LastHeader() {
         <div>
             <div>
                 <Grid container item xs={12} sx={{ justifyContent: "space-between", display: "flex", textAlign: "center", padding: "20px 0" }}>
-                    <Grid item xs={3}>
+                    <Grid item xs={12} lg={3} md={6} sm={12}>
                         <Box display={"flex"} justifyContent={"center"} >
                             <LocalShippingOutlinedIcon sx={{ color: "#b2905f" }} />
                             <Typography fontFamily={"Manrope, sans-serif"} sx={{ paddingLeft: "10px", color: "#808080" }}>
@@ -19,7 +19,7 @@ function LastHeader() {
                             </Typography>
                         </Box>
                     </Grid>
-                    <Grid item xs={3}>
+                    <Grid item xs={12} lg={3} md={6} sm={12}>
                         <Box display={"flex"} justifyContent={"center"} >
                             <ReplayOutlinedIcon sx={{ color: "#b2905f" }} />
                             <Typography fontFamily={"Manrope, sans-serif"} sx={{ paddingLeft: "10px", color: "#808080" }}>
@@ -27,7 +27,7 @@ function LastHeader() {
                             </Typography>
                         </Box>
                     </Grid>
-                    <Grid item xs={3}>
+                    <Grid item xs={12} lg={3} md={6} sm={12}>
                         <Box display={"flex"} justifyContent={"center"} >
                             <LockOutlinedIcon sx={{ color: "#b2905f" }} />
                             <Typography fontFamily={"Manrope, sans-serif"} sx={{ paddingLeft: "10px", color: "#808080" }}>
@@ -35,7 +35,7 @@ function LastHeader() {
                             </Typography>
                         </Box>
                     </Grid>
-                    <Grid item xs={3}>
+                    <Grid item xs={12} lg={3} md={6} sm={12}>
                         <Box display={"flex"} justifyContent={"center"} >
                             <CardGiftcardOutlinedIcon sx={{ color: "#b2905f" }} />
                             <Typography fontFamily={"Manrope, sans-serif"} sx={{ paddingLeft: "10px", color: "#808080" }}>
