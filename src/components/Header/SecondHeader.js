@@ -70,7 +70,7 @@ function SecondHeader(props) {
                                             }
 
                                         }
-                                    }} onClick={() => navigate("/blogs")}>COLLECTION <KeyboardArrowDownIcon></KeyboardArrowDownIcon>
+                                    }} onClick={() => navigate("/collection")}>COLLECTION <KeyboardArrowDownIcon></KeyboardArrowDownIcon>
                                     <Grid className='subMenu' sx={{ display: "flex", position: "absolute", padding: "20px", whiteSpace: "nowrap", boxShadow: "0 0 10px #00000026", top: "100%", left: "-25%", visibility: "hidden", opacity: "0", backgroundColor: "#fff", width: "207%", justifyContent: "space-around" }}>
                                         <Typography x={{ "&:hover": { color: "#B2905F", transition: ".5s" } }}>
                                             <ListItem sx={{ fontWeight: "600", fontSize: "19px" }}>Gold necklace</ListItem>
@@ -95,7 +95,7 @@ function SecondHeader(props) {
                                         </Typography>
                                     </Grid>
                                 </Typography>
-                                <Typography px={2} sx={{ "&:hover": { color: "#B2905F", transition: ".5s" } }}>BLOG</Typography>
+                                <Typography px={2} sx={{ "&:hover": { color: "#B2905F", transition: ".5s" } }} onClick={()=>navigate("/blogs")}>BLOG</Typography>
                                 <Typography px={2} className='menu'
                                     sx={{
                                         display: "flex", position: "relative",

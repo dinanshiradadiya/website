@@ -6,6 +6,8 @@ import Product1 from '../src/pages/Product1'
 import Collections from '../src/pages/Collection'
 import Blogs from '../src/pages/Blogs'
 
+
+
 function App() {
   return (
     <div>
