@@ -95,7 +95,7 @@ function SecondHeader(props) {
                                         </Typography>
                                     </Grid>
                                 </Typography>
-                                <Typography px={2} sx={{ "&:hover": { color: "#B2905F", transition: ".5s" } }} onClick={()=>navigate("/blogs")}>BLOG</Typography>
+                                <Typography px={2} sx={{ "&:hover": { color: "#B2905F", transition: ".5s" } }} onClick={() => navigate("/blogs")}>BLOG</Typography>
                                 <Typography px={2} className='menu'
                                     sx={{
                                         display: "flex", position: "relative",
