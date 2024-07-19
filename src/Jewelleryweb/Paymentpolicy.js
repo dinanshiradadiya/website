@@ -24,83 +24,83 @@ function Paymentpolicy() {
                     </Box>
                 </Container>
             </Box>
-           <Box>
-           <Container maxWidth>
-            <Grid item container xs={12} spacing={4} padding={6}>
-                <Grid item xs={12} md={6} lg={4} >
-                <Box sx={{display: {lg: "flex",md:"flex", xs:"block"}}} backgroundColor={"#f8f6f1"}>
-                    <Box padding={3}>
-                        <img src={pay1} />
-                    </Box>
-                    <Box padding={4}>
-                        <Typography variant='h6' fontWeight={600}>Visa method</Typography>
-                        <Typography color={"#808080"}>Lorem ipsum is simply
-                            of the printing and type.</Typography>
-                    </Box>
-                    </Box>    
-                </Grid>
-                <Grid item xs={12} md={6} lg={4} >
-                <Box sx={{display: {lg: "flex",md:"flex", xs:"block"}}} backgroundColor={"#f8f6f1"}>
-                <Box padding={3}>
-                        <img src={pay2} />
-                    </Box>
-                    <Box padding={4}>
-                        <Typography variant='h6' fontWeight={600}>Sage method</Typography>
-                        <Typography color={"#808080"}>Lorem ipsum is simply
-                            of the printing and type.</Typography>
-                    </Box>
-                    </Box>    
-                </Grid>
-                <Grid item xs={12} md={6} lg={4} >
-                <Box sx={{display: {lg: "flex",md:"flex", xs:"block"}}} backgroundColor={"#f8f6f1"}>
-                <Box padding={3}>
-                        <img src={pay3} />
-                    </Box>
-                    <Box padding={4}>
-                        <Typography variant='h6' fontWeight={600}>Paypal method</Typography>
-                        <Typography color={"#808080"}>Lorem ipsum is simply
-                            of the printing and type.</Typography>
-                    </Box>
-                    </Box>    
-                </Grid>
-                <Grid item xs={12} md={6} lg={4}>
-                <Box sx={{display: {lg: "flex",md:"flex", xs:"block"}}} backgroundColor={"#f8f6f1"}>
-                <Box padding={3}>
-                        <img src={pay4} />
-                    </Box>
-                    <Box padding={4}>
-                        <Typography variant='h6' fontWeight={600}>Maestro method</Typography>
-                        <Typography color={"#808080"}>Lorem ipsum is simply
-                            of the printing and type.</Typography>
-                    </Box>
-                    </Box>     
-                </Grid>
-                <Grid item xs={12} md={6} lg={4} >
-                <Box sx={{display: {lg: "flex",md:"flex", xs:"block"}}} backgroundColor={"#f8f6f1"}>
-                <Box padding={3}>
-                        <img src={pay5} />
-                    </Box>
-                    <Box padding={4}>
-                        <Typography variant='h6' fontWeight={600}>Eway method</Typography>
-                        <Typography color={"#808080"}>Lorem ipsum is simply
-                            of the printing and type.</Typography>
-                    </Box>
-                    </Box>    
-                </Grid>
-                <Grid item xs={12} md={6} lg={4} >
-                <Box sx={{display: {lg: "flex",md:"flex", xs:"block"}}} backgroundColor={"#f8f6f1"}>
-                <Box padding={3}>
-                        <img src={pay6} />
-                    </Box>
-                    <Box padding={4}>
-                        <Typography variant='h6' fontWeight={600}>Discover method</Typography>
-                        <Typography color={"#808080"}>Lorem ipsum is simply
-                            of the printing and type.</Typography>
-                    </Box>
-                    </Box>    
-                </Grid>
-            </Grid>
-            </Container>
+            <Box>
+                <Container maxWidth>
+                    <Grid item container xs={12} spacing={4} padding={6}>
+                        <Grid item xs={12} md={6} lg={4} >
+                            <Box sx={{ display: { lg: "flex", md: "flex", xs: "block" } }} backgroundColor={"#f8f6f1"}>
+                                <Box padding={3}>
+                                    <img src={pay1} />
+                                </Box>
+                                <Box padding={4}>
+                                    <Typography variant='h6' fontWeight={600}>Visa method</Typography>
+                                    <Typography color={"#808080"}>Lorem ipsum is simply
+                                        of the printing and type.</Typography>
+                                </Box>
+                            </Box>
+                        </Grid>
+                        <Grid item xs={12} md={6} lg={4} >
+                            <Box sx={{ display: { lg: "flex", md: "flex", xs: "block" } }} backgroundColor={"#f8f6f1"}>
+                                <Box padding={3}>
+                                    <img src={pay2} />
+                                </Box>
+                                <Box padding={4}>
+                                    <Typography variant='h6' fontWeight={600}>Sage method</Typography>
+                                    <Typography color={"#808080"}>Lorem ipsum is simply
+                                        of the printing and type.</Typography>
+                                </Box>
+                            </Box>
+                        </Grid>
+                        <Grid item xs={12} md={6} lg={4} >
+                            <Box sx={{ display: { lg: "flex", md: "flex", xs: "block" } }} backgroundColor={"#f8f6f1"}>
+                                <Box padding={3}>
+                                    <img src={pay3} />
+                                </Box>
+                                <Box padding={4}>
+                                    <Typography variant='h6' fontWeight={600}>Paypal method</Typography>
+                                    <Typography color={"#808080"}>Lorem ipsum is simply
+                                        of the printing and type.</Typography>
+                                </Box>
+                            </Box>
+                        </Grid>
+                        <Grid item xs={12} md={6} lg={4}>
+                            <Box sx={{ display: { lg: "flex", md: "flex", xs: "block" } }} backgroundColor={"#f8f6f1"}>
+                                <Box padding={3}>
+                                    <img src={pay4} />
+                                </Box>
+                                <Box padding={4}>
+                                    <Typography variant='h6' fontWeight={600}>Maestro method</Typography>
+                                    <Typography color={"#808080"}>Lorem ipsum is simply
+                                        of the printing and type.</Typography>
+                                </Box>
+                            </Box>
+                        </Grid>
+                        <Grid item xs={12} md={6} lg={4} >
+                            <Box sx={{ display: { lg: "flex", md: "flex", xs: "block" } }} backgroundColor={"#f8f6f1"}>
+                                <Box padding={3}>
+                                    <img src={pay5} />
+                                </Box>
+                                <Box padding={4}>
+                                    <Typography variant='h6' fontWeight={600}>Eway method</Typography>
+                                    <Typography color={"#808080"}>Lorem ipsum is simply
+                                        of the printing and type.</Typography>
+                                </Box>
+                            </Box>
+                        </Grid>
+                        <Grid item xs={12} md={6} lg={4} >
+                            <Box sx={{ display: { lg: "flex", md: "flex", xs: "block" } }} backgroundColor={"#f8f6f1"}>
+                                <Box padding={3}>
+                                    <img src={pay6} />
+                                </Box>
+                                <Box padding={4}>
+                                    <Typography variant='h6' fontWeight={600}>Discover method</Typography>
+                                    <Typography color={"#808080"}>Lorem ipsum is simply
+                                        of the printing and type.</Typography>
+                                </Box>
+                            </Box>
+                        </Grid>
+                    </Grid>
+                </Container>
             </Box>
             <Box marginTop={10}>
                 <Grid container xs={12}>
@@ -114,21 +114,21 @@ function Paymentpolicy() {
                                 <Typography variant='h3' fontFamily={"'Marcellus', sans-serif"}>credit card use one !</Typography>
                             </Box>
                             <Box marginTop={3}>
-                                <Box sx={{display:"flex"}}>
-                                <Typography sx={{backgroundColor:"white",border:"1px solid gray",margin:"20px 10px 0 0",borderRadius:"50%",height:"6%",width:"6%",display:"flex",justifyContent:"center",fontSize:"17px",fontWeight:"600",color:"#b2905f"}}>1</Typography>
-                                <Typography lineHeight={2} fontSize={18} color={"#808080"} marginBottom={2} margin={"0 0 0 10px"}>Bank transfers are a payment method the from a customer bank to a merchant bank</Typography>
+                                <Box sx={{ display: "flex" }}>
+                                    <Typography sx={{ backgroundColor: "white", border: "1px solid gray", margin: "20px 10px 0 0", borderRadius: "50%", height: "6%", width: "6%", padding: "5px", display: "flex", justifyContent: "center", fontSize: "17px", fontWeight: "600", color: "#b2905f" }}>1</Typography>
+                                    <Typography lineHeight={2} fontSize={18} color={"#808080"} marginBottom={2} margin={"0 0 0 10px"}>Bank transfers are a payment method the from a customer bank to a merchant bank</Typography>
                                 </Box>
-                                <Box sx={{display:"flex"}}>
-                                <Typography sx={{backgroundColor:"white",border:"1px solid gray",margin:"20px 10px 0 0",borderRadius:"50%",height:"6%",width:"6%",display:"flex",justifyContent:"center",fontSize:"17px",fontWeight:"600",color:"#b2905f"}}>2</Typography>
-                                <Typography lineHeight={2} fontSize={18} color={"#808080"} marginBottom={2}>To learn more, and to configure payment methods, define types payment methods</Typography>
+                                <Box sx={{ display: "flex" }}>
+                                    <Typography sx={{ backgroundColor: "white", border: "1px solid gray", margin: "20px 10px 0 0", borderRadius: "50%", height: "6%", width: "6%", display: "flex", justifyContent: "center", fontSize: "17px", fontWeight: "600", color: "#b2905f" }}>2</Typography>
+                                    <Typography lineHeight={2} fontSize={18} color={"#808080"} marginBottom={2}>To learn more, and to configure payment methods, define types payment methods</Typography>
                                 </Box>
-                                <Box sx={{display:"flex"}}>
-                                <Typography sx={{backgroundColor:"white",border:"1px solid gray",margin:"20px 10px 0 0",borderRadius:"50%",height:"6%",width:"6%",display:"flex",justifyContent:"center",fontSize:"17px",fontWeight:"600",color:"#b2905f"}}>3</Typography>
-                                <Typography lineHeight={2} fontSize={18} color={"#808080"} marginBottom={2}>There are numerous tiers of credit cards, depending on the card brand/network</Typography>
+                                <Box sx={{ display: "flex" }}>
+                                    <Typography sx={{ backgroundColor: "white", border: "1px solid gray", margin: "20px 10px 0 0", borderRadius: "50%", height: "6%", width: "6%", display: "flex", justifyContent: "center", fontSize: "17px", fontWeight: "600", color: "#b2905f" }}>3</Typography>
+                                    <Typography lineHeight={2} fontSize={18} color={"#808080"} marginBottom={2}>There are numerous tiers of credit cards, depending on the card brand/network</Typography>
                                 </Box>
-                                <Box display={{display:"flex"}}>
-                                <Typography sx={{backgroundColor:"white",border:"1px solid gray",margin:"20px 10px 0 0",borderRadius:"50%",height:"6%",width:"6%",display:"flex",justifyContent:"center",fontSize:"17px",fontWeight:"600",color:"#b2905f"}}>4</Typography>
-                                <Typography lineHeight={2} fontSize={18} color={"#808080"}>This article introduces what payment method is applied to pay invoices in</Typography>
+                                <Box display={{ display: "flex" }}>
+                                    <Typography sx={{ backgroundColor: "white", border: "1px solid gray", margin: "20px 10px 0 0", borderRadius: "50%", height: "6%", width: "6%", display: "flex", justifyContent: "center", fontSize: "17px", fontWeight: "600", color: "#b2905f" }}>4</Typography>
+                                    <Typography lineHeight={2} fontSize={18} color={"#808080"}>This article introduces what payment method is applied to pay invoices in</Typography>
                                 </Box>
                             </Box>
                         </Box>

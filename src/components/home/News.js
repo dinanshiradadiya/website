@@ -22,7 +22,9 @@ function News() {
                       </Box> 
                       <Typography fontSize={18} fontWeight={600} marginTop={5}>What is necklace?</Typography>
                       <Typography color={"#808080"}  marginTop={2}>Lorem ipsum dolor sit amet, consectetuer adipiscing elit doli Aenean commodo ligula eget dolor Aenea</Typography>
-                      <Button sx={{backgroundColor:"#b2905f",color:"white",marginTop:2}}>READ MORE</Button>
+                      <Button sx={{ backgroundColor: '#b2905f', color: 'white', border: "2px solid #b2905f", borderRadius: '0px', marginTop: '20px', padding: '12px 24px', fontSize: "16px", "&:hover": { backgroundColor: "#f8f6f1", color: "#b2905f" } }}>
+                            READ MORE
+                        </Button>
                     </Box>
                   </Grid>
                   <Grid item xs={12} md={6} lg={3}>
@@ -33,7 +35,9 @@ function News() {
                     </Box>  
                       <Typography fontSize={18} fontWeight={600} marginTop={5}>Why do it we use?</Typography>
                       <Typography color={"#808080"}  marginTop={2}>Lorem ipsum dolor sit amet, consectetuer adipiscing elit doli Aenean commodo ligula eget dolor Aenea</Typography>
-                      <Button sx={{backgroundColor:"#b2905f",color:"white",marginTop:2}}>READ MORE</Button>
+                      <Button sx={{ backgroundColor: '#b2905f', color: 'white', border: "2px solid #b2905f", borderRadius: '0px', marginTop: '20px', padding: '12px 24px', fontSize: "16px", "&:hover": { backgroundColor: "#f8f6f1", color: "#b2905f" } }}>
+                            READ MORE
+                        </Button>
                     </Box>
                   </Grid>
                   <Grid item xs={12} md={6} lg={3}>
@@ -44,7 +48,9 @@ function News() {
                      </Box>
                       <Typography fontSize={18} fontWeight={600} marginTop={5}>Which of undertakes us ever?</Typography>
                       <Typography color={"#808080"}  marginTop={2}>Lorem ipsum dolor sit amet, consectetuer adipiscing elit doli Aenean commodo ligula eget dolor Aenea</Typography>
-                      <Button sx={{backgroundColor:"#b2905f",color:"white", marginTop:2}}>READ MORE</Button>
+                      <Button sx={{ backgroundColor: '#b2905f', color: 'white', border: "2px solid #b2905f", borderRadius: '0px', marginTop: '20px', padding: '12px 24px', fontSize: "16px", "&:hover": { backgroundColor: "#f8f6f1", color: "#b2905f" } }}>
+                            READ MORE
+                        </Button>
                     </Box>
                   </Grid>
                   <Grid item xs={12} md={6} lg={3}>
@@ -55,7 +61,9 @@ function News() {
                     </Box> 
                       <Typography fontSize={18} fontWeight={600} marginTop={5}>What is necklace?</Typography>
                       <Typography color={"#808080"} marginTop={2}>Lorem ipsum dolor sit amet, consectetuer adipiscing elit doli Aenean commodo ligula eget dolor Aenea</Typography>
-                      <Button sx={{backgroundColor:"#b2905f",color:"white",marginTop:2}}>READ MORE</Button>
+                      <Button sx={{ backgroundColor: '#b2905f', color: 'white', border: "2px solid #b2905f", borderRadius: '0px', marginTop: '20px', padding: '12px 24px', fontSize: "16px", "&:hover": { backgroundColor: "#f8f6f1", color: "#b2905f" } }}>
+                            READ MORE
+                        </Button>
                     </Box>
                   </Grid>
 

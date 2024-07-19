@@ -302,7 +302,7 @@ function Product() {
                 alignItems={"center"}
               >
                 <Typography>
-                  <Checkbox color="default" />
+                  <Checkbox color="default"/>
                   Selmon
                 </Typography>
                 <Typography>(1)</Typography>

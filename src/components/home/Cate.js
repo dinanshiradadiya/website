@@ -22,7 +22,7 @@ function Cate() {
                                 <br />jewellery collection.</Typography>
                         </Box>
                         <Button sx={{ backgroundColor: '#b2905f', color: 'white', border: "1px solid #b2905f", borderRadius: '0px', marginTop: '40px', padding: '12px 24px', fontSize: "16px", "&:hover": { backgroundColor: "#fff", color: "#b2905f" } }}>
-                            ADD TO CART
+                            EXPLORE NOW
                         </Button>
                     </Box>
                 </Grid>
