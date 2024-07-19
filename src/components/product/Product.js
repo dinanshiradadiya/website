@@ -7,19 +7,22 @@ import { FixedSizeList } from "react-window";
 import GridViewIcon from "@mui/icons-material/GridView";
 import ListIcon from "@mui/icons-material/List";
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
-// import jewellerypro1 from '../assets/image/product/Jewellery-pro-1.webp'
-import jewellery1 from '../../assets/images/product/jewellery-1.webp'
-import jewellery2 from '../../assets/images/product/jewellery-2.webp'
-import jewellery3 from '../../assets/images/product/jewellery-3.webp'
-import jewellery4 from '../../assets/images/product/jewellery-4.webp'
-import jewellery5 from '../../assets/images/product/jewellery-5.webp'
-import jewellery6 from '../../assets/images/product/jewellery-6.webp'
-import jewellery7 from '../../assets/images/product/jewellery-7.webp'
-import jewellery8 from '../../assets/images/product/jewellery-8.webp'
-import jewellery9 from '../../assets/images/product/jewellery-9.webp'
-import jewellery10 from '../../assets/images/product/jewellery-10.webp'
-import jewellery11 from '../../assets/images/product/jewellery-11.webp'
-import jewellery12 from '../../assets/images/product/jewellery-12.webp'
+import Paper from '@mui/material/Paper';
+import { styled } from '@mui/material/styles';
+import collection02 from '../assets/image/product/collection-02.webp'
+import jewellery1 from '../assets/image/product/jewellery-1.webp'
+import jewellery2 from '../assets/image/product/jewellery-2.webp'
+import jewellery3 from '../assets/image/product/jewellery-3.webp'
+import jewellery4 from '../assets/image/product/jewellery-4.webp'
+import jewellery5 from '../assets/image/product/jewellery-5.webp'
+import jewellery6 from '../assets/image/product/jewellery-6.webp'
+import jewellery7 from '../assets/image/product/jewellery-7.webp'
+import jewellery8 from '../assets/image/product/jewellery-8.webp'
+import jewellery9 from '../assets/image/product/jewellery-9.webp'
+import jewellery10 from '../assets/image/product/jewellery-10.webp'
+import jewellery11 from '../assets/image/product/jewellery-11.webp'
+import jewellery12 from '../assets/image/product/jewellery-12.webp'
+import DoneIcon from '@mui/icons-material/Done';
 
 const itemList = [
   {
@@ -72,13 +75,23 @@ const itemList = [
   },
 ];
 
+const Label = styled(Paper)(({ theme }) => ({
+  backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
+  ...theme.typography.body2,
+  padding: theme.spacing(0.5),
+  textAlign: 'center',
+  color: theme.palette.text.secondary,
+  borderBottomLeftRadius: 0,
+  borderBottomRightRadius: 0,
+}));
+
 function renderRow() {
   return itemList.map((data) => (
     <ListItem component="div" disablePadding>
-      <ListItemButton sx={{ justifyContent: "space-between" }}>
+      <ListItemButton sx={{ display:"flex",transition:".1s",justifyContent: "space-between",fontFamily: "Manrope,sans-serif","&:hover":{color:"#B2905F"}}}>
         <Checkbox color="default" />
-        <ListItemText primary={data.list} sx={{fontFamily: "Manrope,sans-serif"}}/>
-        <ListItemText justifyContent="end" width="100%" primary={data.number} />
+        <ListItemText primary={data.list} />
+        <ListItemText primary={data.number}/>
       </ListItemButton>
     </ListItem>
   ));
@@ -124,7 +137,9 @@ function Product() {
                 maxWidth: 450,
                 display: "flex",
                 marginBottom: "35px",
-                fontFamily: "Manrope,sans-serif"
+                paddingBottom:"50px",
+                fontFamily: "Manrope,sans-serif",
+                borderBottom:"1px solid #ECEAE5"
               }}
             >
               <FixedSizeList
@@ -134,6 +149,7 @@ function Product() {
                 itemCount={1}
                 overscanCount={5}
                 fontFamily="Manrope,sans-serif"
+                sx={{}}
               >
                 {renderRow}
               </FixedSizeList>
@@ -141,9 +157,7 @@ function Product() {
 
             <Typography
               variant="h5"
-              paddingTop={5}
               paddingBottom={2}
-              borderTop={"1px solid black"}
               fontWeight={700}
               fontFamily="Manrope,sans-serif"
             >
@@ -152,14 +166,14 @@ function Product() {
             <Box
               display={"flex"}
               justifyContent={"space-between"}
-              borderBottom={"1px solid black"}
+              sx={{borderBottom:"1px solid #ECEAE5"}}
               paddingBottom={4}
             >
               <Typography variant="h7">12 products</Typography>
               <CircularProgress color="inherit" size={25} />
             </Box>
 
-            <Box borderBottom={"1px solid black"} paddingBottom={4}>
+            <Box sx={{borderBottom:"1px solid #ECEAE5"}} paddingBottom={4}>
               <Typography variant="h5" paddingTop={5} fontWeight={700}>
                 Availability
               </Typography>
@@ -169,7 +183,7 @@ function Product() {
                 paddingTop={2}
               >
                 <Typography>0 selected</Typography>
-                <Typography borderBottom={"1px solid black"}>Reset</Typography>
+                <Typography sx={{borderBottom:"1px solid black",color:"#92938F","&:hover":{color:"black"}}}>Reset</Typography>
               </Box>
               <Box
                 paddingTop={2}
@@ -206,7 +220,7 @@ function Product() {
                 paddingTop={2}
               >
                 <Typography>The highest price is $75.00</Typography>
-                <Typography borderBottom={"1px solid black"}>Reset</Typography>
+                <Typography sx={{borderBottom:"1px solid black",color:"#92938F","&:hover":{color:"black"}}}>Reset</Typography>
               </Box>
               <Box sx={{ width: 300 }} marginTop={2}>
                 <Slider
@@ -214,13 +228,13 @@ function Product() {
                   value={value}
                   onChange={handleChange}
                   getAriaValueText={valuetext}
-                  color="#B2905F"
+                   sx={{color:"#B2905F"}}
                 />
               </Box>
               <Box
                 marginTop={3}
                 alignItems={"center"}
-                borderBottom={"1px solid black"}
+                sx={{borderBottom:"1px solid #ECEAE5"}}
                 paddingBottom={4}
               >
                 <Box display={"flex"} justifyContent={"space-between"}>
@@ -234,7 +248,7 @@ function Product() {
                     alignItems="center"
                     gap={4}
                     p={2}
-                    sx={{ border: "2px solid white", backgroundColor: "white" }}
+                    sx={{ backgroundColor: "white" }}
                     justifyContent={"space-between"}
                   >
                     <Typography>$</Typography>
@@ -257,7 +271,7 @@ function Product() {
               </Box>
             </Box>
 
-            <Box borderBottom={"1px solid black"} paddingBottom={4}>
+            <Box sx={{borderBottom:"1px solid #ECEAE5"}} paddingBottom={4}>
               <Typography variant="h5" paddingTop={5} fontWeight={700}>
                 Brand
               </Typography>
@@ -267,7 +281,7 @@ function Product() {
                 paddingTop={2}
               >
                 <Typography>0 selected</Typography>
-                <Typography borderBottom={"1px solid black"}>Reset</Typography>
+                <Typography sx={{borderBottom:"1px solid black",color:"#92938F","&:hover":{color:"black"}}}>Reset</Typography>
               </Box>
               <Box
                 paddingTop={2}
@@ -283,7 +297,7 @@ function Product() {
               </Box>
             </Box>
 
-            <Box borderBottom={"1px solid black"} paddingBottom={4}>
+            <Box sx={{borderBottom:"1px solid #ECEAE5"}} paddingBottom={4}>
               <Typography variant="h5" paddingTop={5} fontWeight={700}>
                 Size
               </Typography>
@@ -293,7 +307,7 @@ function Product() {
                 paddingTop={2}
               >
                 <Typography>0 selected</Typography>
-                <Typography borderBottom={"1px solid black"}>Reset</Typography>
+                <Typography sx={{borderBottom:"1px solid black",color:"#92938F","&:hover":{color:"black"}}}>Reset</Typography>
               </Box>
               <Box
                 paddingTop={2}
@@ -323,16 +337,16 @@ function Product() {
                 justifyContent={"space-between"}
                 alignItems={"center"}
               >
-                <Typography>
+                <Typography sx={{fontFamily: "Manrope,sans-serif"}}>
                   <Checkbox color="default" />
                   Silver
                 </Typography>
-                <Typography>(1)</Typography>
+                <Typography sx={{fontFamily: "Manrope,sans-serif"}}>(1)</Typography>
               </Box>
             </Box>
 
             <Box paddingBottom={3}>
-              <Typography variant="h5" paddingTop={5} fontWeight={700}>
+              <Typography variant="h5" paddingTop={5} fontWeight={700} sx={{fontFamily: "Manrope,sans-serif"}}>
                 Color
               </Typography>
               <Box
@@ -340,26 +354,39 @@ function Product() {
                 justifyContent={"space-between"}
                 paddingTop={2}
               >
-                <Typography>0 selected</Typography>
-                <Typography borderBottom={"1px solid black"}>Reset</Typography>
+                <Typography sx={{fontFamily: "Manrope,sans-serif"}}>0 selected</Typography>
+                <Typography sx={{borderBottom:"1px solid black",color:"#92938F","&:hover":{color:"black"}}}>Reset</Typography>
               </Box>
               <Box display={"flex"} gap={1} flexWrap={"wrap"} marginTop={3}>
-                   <Typography width={26} height={26} backgroundColor="#008B8B" borderRadius={5}></Typography>
-                   <Typography width={26} height={26} backgroundColor="#CD5C5C" borderRadius={5}></Typography>
-                   <Typography width={26} height={26} backgroundColor="#E6E6FA" borderRadius={5}></Typography>
-                   <Typography width={26} height={26} backgroundColor="#87CEFA" borderRadius={5}></Typography>
-                   <Typography width={26} height={26} backgroundColor="#768798" borderRadius={5}></Typography>
-                   <Typography width={26} height={26} backgroundColor="#FFDEAD" borderRadius={5}></Typography>
-                   <Typography width={26} height={26} backgroundColor="#FDF5E6" borderRadius={5}></Typography>
-                   <Typography width={26} height={26} backgroundColor="#FA8072" borderRadius={5}></Typography>
-                   <Typography width={26} height={26} backgroundColor="#EEE3DD" borderRadius={5}></Typography>
-                   <Typography width={26} height={26} backgroundColor="#C0C0C0" borderRadius={5}></Typography>
-                   <Typography width={26} height={26} backgroundColor="#4682B4" borderRadius={5}></Typography>
+                   <Typography width={26} height={26} backgroundColor="#008B8B" borderRadius={5}></Typography> 
+                   <Typography width={26} height={26} backgroundColor="#CD5C5C" borderRadius={5}></Typography> 
+                   <Typography width={26} height={26} backgroundColor="#E6E6FA" borderRadius={5}></Typography> 
+                   <Typography width={26} height={26} backgroundColor="#87CEFA" borderRadius={5}></Typography> 
+                   <Typography width={26} height={26} backgroundColor="#768798" borderRadius={5}></Typography> 
+                   <Typography width={26} height={26} backgroundColor="#FFDEAD" borderRadius={5}></Typography> 
+                   <Typography width={26} height={26} backgroundColor="#FDF5E6" borderRadius={5}></Typography> 
+                   <Typography width={26} height={26} backgroundColor="#FA8072" borderRadius={5}></Typography> 
+                   <Typography width={26} height={26} backgroundColor="#EEE3DD" borderRadius={5}></Typography> 
+                   <Typography width={26} height={26} backgroundColor="#C0C0C0" borderRadius={5}></Typography> 
+                   <Typography width={26} height={26} backgroundColor="#4682B4" borderRadius={5}></Typography> 
+
+
+                   {/* <DoneIcon sx={{color:"#B2905F","&:hover":{display:"none"}}} />
+                   <DoneIcon sx={{color:"#B2905F","&:hover":{display:"none"}}} />
+                   <DoneIcon sx={{color:"#B2905F","&:hover":{display:"none"}}} />
+                   <DoneIcon sx={{color:"#B2905F","&:hover":{display:"none"}}} />
+                   <DoneIcon sx={{color:"#B2905F","&:hover":{display:"none"}}} />
+                   <DoneIcon sx={{color:"#B2905F","&:hover":{display:"none"}}} />
+                   <DoneIcon sx={{color:"#B2905F","&:hover":{display:"none"}}} />
+                   <DoneIcon sx={{color:"#B2905F","&:hover":{display:"none"}}} />
+                   <DoneIcon sx={{color:"#B2905F","&:hover":{display:"none"}}} />
+                   <DoneIcon sx={{color:"#B2905F","&:hover":{display:"none"}}} />
+                   <DoneIcon sx={{color:"#B2905F","&:hover":{display:"none"}}} /> */}
               </Box>
             </Box>
             <Box paddingBottom={4}>
               <img
-                src="https://qx-aolie.myshopify.com/cdn/shop/files/collection-02.jpg?v=1696588694&width=352"
+                src={collection02}
                 alt="" width={"100%"}
               />
             </Box>
@@ -369,8 +396,8 @@ function Product() {
 
           <Grid item lg={9} sx={{justifyContent:{md:"center",xs:"center"}}}>
 
-            <Box borderBottom={"1px solid black"}>
-              <Typography fontWeight={700} variant="h5" paddingBottom={4}>
+            <Box sx={{borderBottom:"1px solid #ECEAE5"}}>
+              <Typography fontWeight={700} variant="h5" paddingBottom={4} sx={{fontFamily: "Manrope,sans-serif"}}>
                 Products (12)
               </Typography>
               <img
@@ -384,313 +411,41 @@ function Product() {
                   <ListIcon sx={{ fontSize: "30px" }} />
                 </Box>
                 <Box alignItems={"center"} display={"flex"} gap={2}>
-                 <Typography sx={{ color: "#B2905F" }}>Sort by:</Typography>
-                 <Typography>Alphabetically, A-Z </Typography>
+                 <Typography sx={{ color: "#B2905F",fontFamily: "Manrope,sans-serif"}}>Sort by:</Typography>
+                 <Typography sx={{fontFamily: "Manrope,sans-serif"}}>Alphabetically, A-Z </Typography>
                  <KeyboardArrowDownIcon />
                 </Box>
               </Box>
             </Box>
 
-            <Grid item xs={12} container spacing={3} sx={{paddingTop:"30px"}}>
-                   <Grid item xs={12} md={6} lg={4} >
-                   <Box sx={{backgroundColor:"white"}}>
-                       <img src={jewellery1} alt="" width={"100%"}/>
-                       <Typography   sx={{
-                            fontFamily: "Manrope,sans-serif",
-                            backgroundColor: "white",
-                            textAlign: "center",
-                            fontWeight: 700,
-                            paddingTop:1
-                            }}>Aadhila nose pin</Typography>
-                      <Box display={"flex"} justifyContent={"center"} paddingBottom={2} >
-                        <Typography
-                          sx={{fontFamily: "Manrope,sans-serif",
-                          backgroundColor: "white",textAlign: "center",
-                          fontWeight: 700,paddingTop:1,color: "#B2905F",
-                          }}>$31.00 </Typography>
-                        <Typography
-                          sx={{
-                            fontFamily: "Manrope,sans-serif",
-                            backgroundColor: "white",textAlign: "center",
-                            fontWeight: 700,paddingTop:1
-                            }}> ~ <s>$39.00</s></Typography>
-                      </Box>
-                   </Box>
-                   </Grid>
-                   <Grid item xs={12} md={6} lg={4}>
-                   <Box sx={{backgroundColor:"white"}}>
-                       <img src={jewellery2} alt="" width={"100%"}/>
-                       <Typography   sx={{
-                            fontFamily: "Manrope,sans-serif",
-                            backgroundColor: "white",
-                            textAlign: "center",
-                            fontWeight: 700,
-                            paddingTop:1
-                            }}>Borisa nose pin</Typography>
-                      <Box display={"flex"} justifyContent={"center"} paddingBottom={2} >
-                        <Typography
-                          sx={{fontFamily: "Manrope,sans-serif",
-                          backgroundColor: "white",textAlign: "center",
-                          fontWeight: 700,paddingTop:1,color: "#B2905F",
-                          }}>$31.00 </Typography>
-                        <Typography
-                          sx={{
-                            fontFamily: "Manrope,sans-serif",
-                            backgroundColor: "white",textAlign: "center",
-                            fontWeight: 700,paddingTop:1
-                            }}> ~ <s>$39.00</s></Typography>
-                      </Box>
-                   </Box>
-                   </Grid>
-                   <Grid item xs={12} md={6} lg={4}>
-                   <Box sx={{backgroundColor:"white"}}>
-                       <img src={jewellery3} alt="" width={"100%"}/>
-                        <Typography   sx={{
-                            fontFamily: "Manrope,sans-serif",
-                            backgroundColor: "white",
-                            textAlign: "center",
-                            fontWeight: 700,
-                            paddingTop:1
-                            }}>Couple band ring</Typography>
-                      <Box display={"flex"} justifyContent={"center"} paddingBottom={2} >
-                        <Typography
-                          sx={{fontFamily: "Manrope,sans-serif",
-                          backgroundColor: "white",textAlign: "center",
-                          fontWeight: 700,paddingTop:1,color: "#B2905F",
-                          }}>$44.00 </Typography>
-                        <Typography
-                          sx={{
-                            fontFamily: "Manrope,sans-serif",
-                            backgroundColor: "white",textAlign: "center",
-                            fontWeight: 700,paddingTop:1
-                            }}> ~ <s>$49.00</s></Typography>
-                      </Box>
-                   </Box>
-                   </Grid>
-                   <Grid item xs={12} md={6} lg={4} >
-                   <Box sx={{backgroundColor:"white"}}>
-                       <img src={jewellery4} alt="" width={"100%"}/>
-                       <Typography   sx={{
-                            fontFamily: "Manrope,sans-serif",
-                            backgroundColor: "white",
-                            textAlign: "center",
-                            fontWeight: 700,
-                            paddingTop:1
-                            }}>Diamond necklace</Typography>
-                      <Box display={"flex"} justifyContent={"center"} paddingBottom={2} >
-                        <Typography
-                          sx={{fontFamily: "Manrope,sans-serif",
-                          backgroundColor: "white",textAlign: "center",
-                          fontWeight: 700,paddingTop:1,color: "#B2905F",
-                          }}>$61.00 </Typography>
-                      </Box>
-                   </Box>
-                   </Grid>
-                   <Grid item xs={12} md={6} lg={4}>
-                   <Box sx={{backgroundColor:"white"}}>
-                       <img src={jewellery5} alt="" width={"100%"}/>
-                       <Typography   sx={{
-                            fontFamily: "Manrope,sans-serif",
-                            backgroundColor: "white",
-                            textAlign: "center",
-                            fontWeight: 700,
-                            paddingTop:1
-                            }}>Earrings 22Kt yellow</Typography>
-                      <Box display={"flex"} justifyContent={"center"} paddingBottom={2} >
-                        <Typography
-                          sx={{fontFamily: "Manrope,sans-serif",
-                          backgroundColor: "white",textAlign: "center",
-                          fontWeight: 700,paddingTop:1,color: "#B2905F",
-                          }}>$49.00 </Typography>
-                        <Typography
-                          sx={{
-                            fontFamily: "Manrope,sans-serif",
-                            backgroundColor: "white",textAlign: "center",
-                            fontWeight: 700,paddingTop:1
-                            }}> ~ <s>$79.00</s></Typography>
-                      </Box>
-                   </Box>
-                   </Grid>
-                   <Grid item xs={12} md={6} lg={4}>
-                   <Box sx={{backgroundColor:"white"}}>
-                       <img src={jewellery6} alt="" width={"100%"}/>
-                        <Typography   sx={{
-                            fontFamily: "Manrope,sans-serif",
-                            backgroundColor: "white",
-                            textAlign: "center",
-                            fontWeight: 700,
-                            paddingTop:1
-                            }}>Eimear necklace</Typography>
-                      <Box display={"flex"} justifyContent={"center"} paddingBottom={2} >
-                        <Typography
-                          sx={{fontFamily: "Manrope,sans-serif",
-                          backgroundColor: "white",textAlign: "center",
-                          fontWeight: 700,paddingTop:1,color: "#B2905F",
-                          }}>$25.00 </Typography>
-                        <Typography
-                          sx={{
-                            fontFamily: "Manrope,sans-serif",
-                            backgroundColor: "white",textAlign: "center",
-                            fontWeight: 700,paddingTop:1
-                            }}> ~ <s>$45.00</s></Typography>
-                      </Box>
-                   </Box>
-                   </Grid>
-          </Grid>
 
-           <Grid item xs={12} container spacing={3} sx={{paddingTop:"30px"}}>
-                   <Grid item xs={12} md={6} lg={4} >
-                   <Box sx={{backgroundColor:"white"}}>
-                       <img src={jewellery7} alt="" width={"100%"}/>
-                       <Typography   sx={{
-                            fontFamily: "Manrope,sans-serif",
-                            backgroundColor: "white",
-                            textAlign: "center",
-                            fontWeight: 700,
-                            paddingTop:1
-                            }}>Mamba ring</Typography>
-                      <Box display={"flex"} justifyContent={"center"} paddingBottom={2} >
-                        <Typography
-                          sx={{fontFamily: "Manrope,sans-serif",
-                          backgroundColor: "white",textAlign: "center",
-                          fontWeight: 700,paddingTop:1,color: "#B2905F",
-                          }}>$11.00 </Typography>
-                        <Typography
-                          sx={{
-                            fontFamily: "Manrope,sans-serif",
-                            backgroundColor: "white",textAlign: "center",
-                            fontWeight: 700,paddingTop:1
-                            }}> ~ <s>$19.00</s></Typography>
+                <Grid item container xs={12} spacing={3} py={3}>
+                     {productList.map((item, index) => (
+                      <Grid item xs={12} md={6} lg={4} >
+                      <Box key={index} >
+                        <img
+                          srcSet={`${item.img}?w=162&auto=format&dpr=2 2x`}
+                          src={item.img}
+                          alt={item.title}
+                          loading="lazy"
+                          style={{
+                            borderBottomLeftRadius: 4,
+                            borderBottomRightRadius: 4,
+                            display: 'block',
+                            width: '100%',
+                          }}
+                        />
+                         <Box py={3} sx={{backgroundColor:"white"}}>
+                         <Typography sx={{color: "#333333", fontFamily: "Manrope,sans-serif",textAlign:"center",fontWeight:"700","&:hover":{color:"#B2905F"}}}>{item.name}</Typography>
+                         <Box display={"flex"} alignItems={"center"} gap={1} justifyContent={"center"}>
+                         <Typography py={1} sx={{ fontFamily: "Manrope,sans-serif",textAlign:"center",fontWeight:"700",color:"#B2905F"}}>{item.price}</Typography>
+                         <Typography sx={{ fontFamily: "Manrope,sans-serif",textAlign:"center",fontWeight:"700",color:"#808080"}}> ~ <s>{item.price2}</s></Typography>
+                         </Box>
+                         </Box>
                       </Box>
-                   </Box>
-                   </Grid>
-                   <Grid item xs={12} md={6} lg={4}>
-                   <Box sx={{backgroundColor:"white"}}>
-                       <img src={jewellery8} alt="" width={"100%"}/>
-                       <Typography   sx={{
-                            fontFamily: "Manrope,sans-serif",
-                            backgroundColor: "white",
-                            textAlign: "center",
-                            fontWeight: 700,
-                            paddingTop:1
-                            }}>Muricelle bangle</Typography>
-                      <Box display={"flex"} justifyContent={"center"} paddingBottom={2} >
-                        <Typography
-                          sx={{fontFamily: "Manrope,sans-serif",
-                          backgroundColor: "white",textAlign: "center",
-                          fontWeight: 700,paddingTop:1,color: "#B2905F",
-                          }}>$21.00 </Typography>
-                        <Typography
-                          sx={{
-                            fontFamily: "Manrope,sans-serif",
-                            backgroundColor: "white",textAlign: "center",
-                            fontWeight: 700,paddingTop:1
-                            }}> ~ <s>$25.00</s></Typography>
-                      </Box>
-                   </Box>
-                   </Grid>
-                   <Grid item xs={12} md={6} lg={4}>
-                   <Box sx={{backgroundColor:"white"}}>
-                       <img src={jewellery9} alt="" width={"100%"}/>
-                        <Typography   sx={{
-                            fontFamily: "Manrope,sans-serif",
-                            backgroundColor: "white",
-                            textAlign: "center",
-                            fontWeight: 700,
-                            paddingTop:1
-                            }}>Simplistic earrings</Typography>
-                      <Box display={"flex"} justifyContent={"center"} paddingBottom={2} >
-                        <Typography
-                          sx={{fontFamily: "Manrope,sans-serif",
-                          backgroundColor: "white",textAlign: "center",
-                          fontWeight: 700,paddingTop:1,color: "#B2905F",
-                          }}>$31.00 </Typography>
-                        <Typography
-                          sx={{
-                            fontFamily: "Manrope,sans-serif",
-                            backgroundColor: "white",textAlign: "center",
-                            fontWeight: 700,paddingTop:1
-                            }}> ~ <s>$39.00</s></Typography>
-                      </Box>
-                   </Box>
-                   </Grid>
-                   <Grid item xs={12} md={6} lg={4} >
-                   <Box sx={{backgroundColor:"white"}}>
-                       <img src={jewellery10} alt="" width={"100%"}/>
-                       <Typography   sx={{
-                            fontFamily: "Manrope,sans-serif",
-                            backgroundColor: "white",
-                            textAlign: "center",
-                            fontWeight: 700,
-                            paddingTop:1
-                            }}>Stud earrings</Typography>
-                      <Box display={"flex"} justifyContent={"center"} paddingBottom={2} >
-                        <Typography
-                          sx={{fontFamily: "Manrope,sans-serif",
-                          backgroundColor: "white",textAlign: "center",
-                          fontWeight: 700,paddingTop:1,color: "#B2905F",
-                          }}>$61.00 </Typography>
-                        <Typography
-                          sx={{
-                            fontFamily: "Manrope,sans-serif",
-                            backgroundColor: "white",textAlign: "center",
-                            fontWeight: 700,paddingTop:1
-                            }}> ~ <s>$69.00</s></Typography>
-                      </Box>
-                   </Box>
-                   </Grid>
-                   <Grid item xs={12} md={6} lg={4}>
-                   <Box sx={{backgroundColor:"white"}}>
-                       <img src={jewellery11} alt="" width={"100%"}/>
-                       <Typography   sx={{
-                            fontFamily: "Manrope,sans-serif",
-                            backgroundColor: "white",
-                            textAlign: "center",
-                            fontWeight: 700,
-                            paddingTop:1
-                            }}>Toggle bangle</Typography>
-                      <Box display={"flex"} justifyContent={"center"} paddingBottom={2} >
-                        <Typography
-                          sx={{fontFamily: "Manrope,sans-serif",
-                          backgroundColor: "white",textAlign: "center",
-                          fontWeight: 700,paddingTop:1,color: "#B2905F",
-                          }}>$24.00 </Typography>
-                        <Typography
-                          sx={{
-                            fontFamily: "Manrope,sans-serif",
-                            backgroundColor: "white",textAlign: "center",
-                            fontWeight: 700,paddingTop:1
-                            }}> ~ <s>$29.00</s></Typography>
-                      </Box>
-                   </Box>
-                   </Grid>
-                   <Grid item xs={12} md={6} lg={4}>
-                   <Box sx={{backgroundColor:"white"}}>
-                       <img src={jewellery12} alt="" width={"100%"}/>
-                        <Typography   sx={{
-                            fontFamily: "Manrope,sans-serif",
-                            backgroundColor: "white",
-                            textAlign: "center",
-                            fontWeight: 700,
-                            paddingTop:1
-                            }}>Yellow ring 18 kt</Typography>
-                      <Box display={"flex"} justifyContent={"center"} paddingBottom={2} >
-                        <Typography
-                          sx={{fontFamily: "Manrope,sans-serif",
-                          backgroundColor: "white",textAlign: "center",
-                          fontWeight: 700,paddingTop:1,color: "#B2905F",
-                          }}>$52.00 </Typography>
-                        <Typography
-                          sx={{
-                            fontFamily: "Manrope,sans-serif",
-                            backgroundColor: "white",textAlign: "center",
-                            fontWeight: 700,paddingTop:1
-                            }}> ~ <s>$79.00</s></Typography>
-                      </Box>
-                   </Box>
-                   </Grid>
-          </Grid>
-
+                      </Grid>
+                    ))}
+                </Grid>
           </Grid>
         </Grid>
       </Box>
@@ -700,3 +455,89 @@ function Product() {
 
 export default Product;
 
+
+const productList = [
+  {
+    id:"jewellery1",
+    img:jewellery1,
+    price:"$31.00",
+    price2:"$39.00",
+    name:"Aadhila nose pin"
+  },
+  {
+    id:"jewellery2",
+    img:jewellery2,
+    price:"$31.00",
+    price2:"$39.00",
+    name:"Borisa nose pin"
+  },
+  {
+    id:"jewellery3",
+    img:jewellery3,
+    price:"$44.00",
+    price2:"$49.00",
+    name:"Couple band ring"
+  },
+  {
+    id:"jewellery4",
+    img:jewellery4,
+    price:"$61.00",
+    name:"Diamond necklace"
+  },
+  {
+    id:"jewellery5",
+    img:jewellery5,
+    price:"$49.00",
+    price2:"$79.00",
+    name:"Earrings 22Kt yellow"
+  },
+  {
+    id:"jewellery6",
+    img:jewellery6,
+    price:"$25.00",
+    price2:"$45.00",
+    name:"Eimear necklace"
+  },
+  {
+    id:"jewellery7",
+    img:jewellery7,
+    price:"$11.00",
+    price2:"$19.00",
+    name:"Mamba ring"
+  },
+  {
+    id:"jewellery8",
+    img:jewellery8,
+    price:"$21.00",
+    price2:"$25.00",
+    name:"Muricelle bangle"
+  },
+  {
+    id:"jewellery9",
+    img:jewellery9,
+    price:"$31.00",
+    price2:"$39.00",
+    name:"Simplistic earrings"
+  },
+  {
+    id:"jewellery10",
+    img:jewellery10,
+    price:"$61.00",
+    price2:"$69.00",
+    name:"Stud earrings"
+  },
+  {
+    id:"jewellery11",
+    img:jewellery11,
+    price:"$24.00",
+    price2:"$29.00",
+    name:"Toggle bangle"
+  },
+  {
+    id:"jewellery12",
+    img:jewellery12,
+    price:"$52.00",
+    price2:"$79.00",
+    name:"Yellow ring 18 kt"
+  }
+]
