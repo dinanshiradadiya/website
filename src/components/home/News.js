@@ -17,7 +17,7 @@ function News() {
                   <Grid item xs={12} md={6} lg={3}>
                     <Box>
                     <Box position={'relative'}>
-                      <img src={news1} width={"100%"}  />
+                      <img src={news1} alt='' width={"100%"}  />
                       <Box position={"absolute"} backgroundColor={"white"} color={"#b2905f"} bottom={"-20px"} padding={2} left={"20px"} fontWeight={600}>08 SEP 22</Box>
                       </Box> 
                       <Typography fontSize={18} fontWeight={600} marginTop={5}>What is necklace?</Typography>
@@ -30,7 +30,7 @@ function News() {
                   <Grid item xs={12} md={6} lg={3}>
                     <Box>
                     <Box position={"relative"}>
-                      <img src={news2} width={"100%"}/>
+                      <img src={news2} alt='' width={"100%"}/>
                       <Box position={"absolute"} backgroundColor={"white"} color={"#b2905f"} bottom={"-20px"} padding={2} left={"20px"} fontWeight={600}>06 SEP 22</Box>
                     </Box>  
                       <Typography fontSize={18} fontWeight={600} marginTop={5}>Why do it we use?</Typography>
@@ -43,7 +43,7 @@ function News() {
                   <Grid item xs={12} md={6} lg={3}>
                     <Box>
                      <Box position={"relative"}>
-                      <img src={news3} width={"100%"}/>
+                      <img src={news3} alt='' width={"100%"}/>
                       <Box position={"absolute"} backgroundColor={"white"} color={"#b2905f"} bottom={"-20px"} padding={2} left={"20px"} fontWeight={600}>08 SEP 22</Box>
                      </Box>
                       <Typography fontSize={18} fontWeight={600} marginTop={5}>Which of undertakes us ever?</Typography>
@@ -56,7 +56,7 @@ function News() {
                   <Grid item xs={12} md={6} lg={3}>
                     <Box> 
                      <Box position={"relative"}>
-                      <img src={news1} width={"100%"}/>
+                      <img src={news1} alt='' width={"100%"}/>
                       <Box position={"absolute"} backgroundColor={"white"} color={"#b2905f"} bottom={"-20px"} padding={2} left={"20px"} fontWeight={600}>08 SEP 22</Box>
                     </Box> 
                       <Typography fontSize={18} fontWeight={600} marginTop={5}>What is necklace?</Typography>

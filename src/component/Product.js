@@ -9,19 +9,35 @@ import ListIcon from "@mui/icons-material/List";
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import Paper from '@mui/material/Paper';
 import { styled } from '@mui/material/styles';
-import collection02 from '../assets/image/product/collection-02.webp'
-import jewellery1 from '../assets/image/product/jewellery-1.webp'
-import jewellery2 from '../assets/image/product/jewellery-2.webp'
-import jewellery3 from '../assets/image/product/jewellery-3.webp'
-import jewellery4 from '../assets/image/product/jewellery-4.webp'
-import jewellery5 from '../assets/image/product/jewellery-5.webp'
-import jewellery6 from '../assets/image/product/jewellery-6.webp'
-import jewellery7 from '../assets/image/product/jewellery-7.webp'
-import jewellery8 from '../assets/image/product/jewellery-8.webp'
-import jewellery9 from '../assets/image/product/jewellery-9.webp'
-import jewellery10 from '../assets/image/product/jewellery-10.webp'
-import jewellery11 from '../assets/image/product/jewellery-11.webp'
-import jewellery12 from '../assets/image/product/jewellery-12.webp'
+// import collection02 from '../assets/image/product/collection-02.webp'
+// import jewellery1 from '../assets/image/product/jewellery-1.webp'
+// import jewellery2 from '../assets/image/product/jewellery-2.webp'
+// import jewellery3 from '../assets/image/product/jewellery-3.webp'
+// import jewellery4 from '../assets/image/product/jewellery-4.webp'
+// import jewellery5 from '../assets/image/product/jewellery-5.webp'
+// import jewellery6 from '../assets/image/product/jewellery-6.webp'
+// import jewellery7 from '../assets/image/product/jewellery-7.webp'
+// import jewellery8 from '../assets/image/product/jewellery-8.webp'
+// import jewellery9 from '../assets/image/product/jewellery-9.webp'
+// import jewellery10 from '../assets/image/product/jewellery-10.webp'
+// import jewellery11 from '../assets/image/product/jewellery-11.webp'
+// import jewellery12 from '../assets/image/product/jewellery-12.webp'
+
+
+import jewellery1 from '../../src/assets/images/product/jewellery-1.webp'
+import jewellery2 from '../../src/assets/images/product/jewellery-2.webp'
+import jewellery3 from '../../src/assets/images/product/jewellery-3.webp'
+import jewellery4 from '../../src/assets/images/product/jewellery-4.webp'
+import jewellery5 from '../../src/assets/images/product/jewellery-5.webp'
+import jewellery6 from '../../src/assets/images/product/jewellery-6.webp'
+import jewellery7 from '../../src/assets/images/product/jewellery-7.webp'
+import jewellery8 from '../../src/assets/images/product/jewellery-8.webp'
+import jewellery9 from '../../src/assets/images/product/jewellery-9.webp'
+import jewellery10 from '../../src/assets/images/product/jewellery-10.webp'
+import jewellery11 from '../../src/assets/images/product/jewellery-11.webp'
+import jewellery12 from '../../src/assets/images/product/jewellery-12.webp'
+import collection02 from '../../src/assets/image/product/collection-02.webp'
+
 import DoneIcon from '@mui/icons-material/Done';
 
 const itemList = [
@@ -74,6 +90,91 @@ const itemList = [
     number: "(8)",
   },
 ];
+const productList = [
+  {
+    id:"jewellery1",
+    img:jewellery1,
+    price:"$31.00",
+    price2:"$39.00",
+    name:"Aadhila nose pin"
+  },
+  {
+    id:"jewellery2",
+    img:jewellery2,
+    price:"$31.00",
+    price2:"$39.00",
+    name:"Borisa nose pin"
+  },
+  {
+    id:"jewellery3",
+    img:jewellery3,
+    price:"$44.00",
+    price2:"$49.00",
+    name:"Couple band ring"
+  },
+  {
+    id:"jewellery4",
+    img:jewellery4,
+    price:"$61.00",
+    name:"Diamond necklace"
+  },
+  {
+    id:"jewellery5",
+    img:jewellery5,
+    price:"$49.00",
+    price2:"$79.00",
+    name:"Earrings 22Kt yellow"
+  },
+  {
+    id:"jewellery6",
+    img:jewellery6,
+    price:"$25.00",
+    price2:"$45.00",
+    name:"Eimear necklace"
+  },
+  {
+    id:"jewellery7",
+    img:jewellery7,
+    price:"$11.00",
+    price2:"$19.00",
+    name:"Mamba ring"
+  },
+  {
+    id:"jewellery8",
+    img:jewellery8,
+    price:"$21.00",
+    price2:"$25.00",
+    name:"Muricelle bangle"
+  },
+  {
+    id:"jewellery9",
+    img:jewellery9,
+    price:"$31.00",
+    price2:"$39.00",
+    name:"Simplistic earrings"
+  },
+  {
+    id:"jewellery10",
+    img:jewellery10,
+    price:"$61.00",
+    price2:"$69.00",
+    name:"Stud earrings"
+  },
+  {
+    id:"jewellery11",
+    img:jewellery11,
+    price:"$24.00",
+    price2:"$29.00",
+    name:"Toggle bangle"
+  },
+  {
+    id:"jewellery12",
+    img:jewellery12,
+    price:"$52.00",
+    price2:"$79.00",
+    name:"Yellow ring 18 kt"
+  }
+]
 
 const Label = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -456,88 +557,4 @@ function Product() {
 export default Product;
 
 
-const productList = [
-  {
-    id:"jewellery1",
-    img:jewellery1,
-    price:"$31.00",
-    price2:"$39.00",
-    name:"Aadhila nose pin"
-  },
-  {
-    id:"jewellery2",
-    img:jewellery2,
-    price:"$31.00",
-    price2:"$39.00",
-    name:"Borisa nose pin"
-  },
-  {
-    id:"jewellery3",
-    img:jewellery3,
-    price:"$44.00",
-    price2:"$49.00",
-    name:"Couple band ring"
-  },
-  {
-    id:"jewellery4",
-    img:jewellery4,
-    price:"$61.00",
-    name:"Diamond necklace"
-  },
-  {
-    id:"jewellery5",
-    img:jewellery5,
-    price:"$49.00",
-    price2:"$79.00",
-    name:"Earrings 22Kt yellow"
-  },
-  {
-    id:"jewellery6",
-    img:jewellery6,
-    price:"$25.00",
-    price2:"$45.00",
-    name:"Eimear necklace"
-  },
-  {
-    id:"jewellery7",
-    img:jewellery7,
-    price:"$11.00",
-    price2:"$19.00",
-    name:"Mamba ring"
-  },
-  {
-    id:"jewellery8",
-    img:jewellery8,
-    price:"$21.00",
-    price2:"$25.00",
-    name:"Muricelle bangle"
-  },
-  {
-    id:"jewellery9",
-    img:jewellery9,
-    price:"$31.00",
-    price2:"$39.00",
-    name:"Simplistic earrings"
-  },
-  {
-    id:"jewellery10",
-    img:jewellery10,
-    price:"$61.00",
-    price2:"$69.00",
-    name:"Stud earrings"
-  },
-  {
-    id:"jewellery11",
-    img:jewellery11,
-    price:"$24.00",
-    price2:"$29.00",
-    name:"Toggle bangle"
-  },
-  {
-    id:"jewellery12",
-    img:jewellery12,
-    price:"$52.00",
-    price2:"$79.00",
-    name:"Yellow ring 18 kt"
-  }
-]
+

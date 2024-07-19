@@ -6,9 +6,9 @@ import LastHeader from '../components/Header/LastHeader';
 function Header() {
   return (
     <div>
-        <FristHeader/>
-        <SecondHeader/>
-        <LastHeader/>
+      <FristHeader />
+      <SecondHeader />
+      <LastHeader />
     </div>
   )
 }
