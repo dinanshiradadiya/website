@@ -8,7 +8,7 @@ function Product1() {
     <div>
       <Header/>
       <Product />
-      <Footer/>
+      <Footer />
     </div>
   )
 }

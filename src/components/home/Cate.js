@@ -1,9 +1,10 @@
-import { Box, Button, CardMedia, Grid, Link, Typography } from '@mui/material'
+import { Box, Button, CardMedia, Container, Grid, Link, Typography } from '@mui/material'
 import React from 'react'
 
 function Cate() {
     return (
-        <Box paddingBottom={5}>
+        <Container maxWidth>
+            <Box paddingBottom={5}>
             <Grid spacing={2} container maxWidth item xs={12}>
                 <Grid item xs={12} md={6} lg={4} display={"flex"} justifyContent={"center"}>
                     <CardMedia
@@ -45,6 +46,7 @@ function Cate() {
             </Grid>
 
         </Box>
+        </Container>
     )
 }
 
