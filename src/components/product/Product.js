@@ -9,21 +9,19 @@ import ListIcon from "@mui/icons-material/List";
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import Paper from '@mui/material/Paper';
 import { styled } from '@mui/material/styles';
-import collection02 from '../assets/image/product/collection-02.webp'
-import jewellery1 from '../assets/image/product/jewellery-1.webp'
-import jewellery2 from '../assets/image/product/jewellery-2.webp'
-import jewellery3 from '../assets/image/product/jewellery-3.webp'
-import jewellery4 from '../assets/image/product/jewellery-4.webp'
-import jewellery5 from '../assets/image/product/jewellery-5.webp'
-import jewellery6 from '../assets/image/product/jewellery-6.webp'
-import jewellery7 from '../assets/image/product/jewellery-7.webp'
-import jewellery8 from '../assets/image/product/jewellery-8.webp'
-import jewellery9 from '../assets/image/product/jewellery-9.webp'
-import jewellery10 from '../assets/image/product/jewellery-10.webp'
-import jewellery11 from '../assets/image/product/jewellery-11.webp'
-import jewellery12 from '../assets/image/product/jewellery-12.webp'
-import DoneIcon from '@mui/icons-material/Done';
-
+import collection02 from '../../assets/image/product/collection-02.webp'
+import jewellery1 from '../../assets/image/product/jewellery-1.webp'
+import jewellery2 from '../../assets/image/product/jewellery-2.webp'
+import jewellery3 from '../../assets/image/product/jewellery-3.webp'
+import jewellery4 from '../../assets/image/product/jewellery-4.webp'
+import jewellery5 from '../../assets/image/product/jewellery-5.webp'
+import jewellery6 from '../../assets/image/product/jewellery-6.webp'
+import jewellery7 from '../../assets/image/product/jewellery-7.webp'
+import jewellery8 from '../../assets/image/product/jewellery-8.webp'
+import jewellery9 from '../../assets/image/product/jewellery-9.webp'
+import jewellery10 from '../../assets/image/product/jewellery-10.webp'
+import jewellery11 from '../../assets/image/product/jewellery-11.webp'
+import jewellery12 from '../../assets/image/product/jewellery-12.webp'
 const itemList = [
   {
     list: "Bestseller",

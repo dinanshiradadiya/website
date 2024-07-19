@@ -54,8 +54,8 @@ function SecondHeader(props) {
                     <Grid item xs={12} lg={6} sx={{ display: { sx: "none", sm: "none", md: "none", lg: "block", } }} >
                         <Box sx={{ display: "flex", alignItems: "center", position: "relative" }}>
                             <Typography sx={{ display: "flex", padding: "20px 0", alignItems: "center", fontWeight: "600", fontSize: "16px", color: "#333333" }} id="Nav">
-                                <Typography px={2} sx={{ "&:hover": { color: "#B2905F", transition: ".5s" } }} onClick={() => navigate("/product1")}>HOME</Typography>
-                                <Typography px={2} sx={{ "&:hover": { color: "#B2905F", transition: ".5s" } }} onClick={() => navigate("/collection")}>PRODUCT</Typography>
+                                <Typography px={2} sx={{ "&:hover": { color: "#B2905F", transition: ".5s" } }} onClick={() => navigate("/")}>HOME</Typography>
+                                <Typography px={2} sx={{ "&:hover": { color: "#B2905F", transition: ".5s" } }} onClick={() => navigate("/product1")}>PRODUCT</Typography>
                                 <Typography px={2} className='menu'
                                     sx={{
                                         display: "flex",

@@ -1,16 +1,24 @@
 import React from 'react'
-import Product from './component/Product'
-import Productprops from './component/Productprops'
-import Productdescreption from './component/Productdescreption'
-import Reletedproduct from './component/Reletedproduct'
+import { Routes } from 'react-router-dom';
+import { Route } from '@mui/icons-material'
+import Home from '../src/pages/Home'
+import Product1 from '../src/pages/Product1'
+import Collections from '../src/pages/Collection'
+import Blogs from '../src/pages/Blogs'
 
 function App() {
   return (
     <div>
-      <Product />
+      {/* <Product />
       <Productprops />
       <Productdescreption />
-      <Reletedproduct />
+      <Reletedproduct /> */}
+      <Routes>
+        <Route path='/' element={<Home/>}/>
+        <Route path='/product1' element={<Product1/>}/>
+        <Route path='/collection' element={<Collections/>}/>
+        <Route path='/blogs' element={<Blogs/>}/>
+      </Routes>
     </div>
   )
 }
