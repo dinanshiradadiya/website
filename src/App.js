@@ -1,24 +1,27 @@
 import React from 'react'
-import Home from './pages/Home'
+import Product from './component/Product'
+import Productprops from './component/Productprops'
+import Productdescreption from './component/Productdescreption'
+import Reletedproduct from './component/Reletedproduct'
+import { Route, Routes } from 'react-router-dom'
+// import { Collections, Home } from '@mui/icons-material'
 import Product1 from './pages/Product1'
-import Blogs from './pages/Blogs'
-import Collection from './pages/Collection'
-import { Routes, Route} from 'react-router-dom'
+import Home from "./pages/Home"
+import Collections  from './pages/Collection'
+import Blogs from "./pages/Blogs"
 
 function App() {
   return (
     <div>
-      {/* <Home /> */}
-      {/* <Product1 /> */}
-        {/* <Collection /> */}
-      {/* <Blogs /> */}
-      {/* <Footer /> */}
-
+      {/* <Product /> */}
+      {/* <Productprops /> */}
+      {/* <Productdescreption /> */}
+      {/* <Reletedproduct /> */}
       <Routes>
-        <Route path='/' element={<Home />}></Route>
-        <Route path='/product1' element={<Product1 />}></Route>
-        <Route path='/collection' element={<Collection />}></Route>
-        <Route path='/blogs' element={<Blogs />}></Route>
+        <Route path='/' element={<Home/>}/>
+        <Route path='/product1' element={<Product1/>}/>
+        <Route path='/collection' element={<Collections/>}/>
+        <Route path='/blogs' element={<Blogs/>}/>
       </Routes>
     </div>
   )
