@@ -1,10 +1,10 @@
 import React from 'react'
-import { Routes } from 'react-router-dom';
-import { Route } from '@mui/icons-material'
+import { Routes ,Route } from 'react-router-dom';
 import Home from '../src/pages/Home'
 import Product1 from '../src/pages/Product1'
 import Collections from '../src/pages/Collection'
 import Blogs from '../src/pages/Blogs'
+
 
 
 

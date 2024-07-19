@@ -1,5 +1,6 @@
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
-import Productbtn from "../component/Productbtn";
+import Productbtn from "../components/product/Productbtn";
+
 
  
 

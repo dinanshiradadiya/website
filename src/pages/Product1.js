@@ -6,7 +6,7 @@ import Footer from '../commoncomponents/Footer'
 function Product1() {
   return (
     <div>
-    <Header/>
+      <Header/>
       <Product />
       <Footer/>
     </div>
