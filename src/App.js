@@ -14,15 +14,15 @@ import Paymentpolicy from './Jewelleryweb/Paymentpolicy';
 function App() {
   return (
     <div className="">
-       {/* <Cate/>
+      {/* <Cate/>
        <Trandingproduct/>
        <Viewer/>
        <Poster/>
        <News/> */}
-       {/* <Navbar/> */}
-       {/* <Returnpolicy/> */}
-       <Paymentpolicy/>
-       {/* <Terms/> */}
+      {/* <Navbar/> */}
+      {/* <Returnpolicy/> */}
+      <Paymentpolicy />
+      {/* <Terms/> */}
     </div>
   );
 }
