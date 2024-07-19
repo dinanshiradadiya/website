@@ -24,7 +24,7 @@ function App() {
         <Route path='/blogs' element={<Blogs/>}/>
       </Routes>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
