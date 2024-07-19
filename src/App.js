@@ -1,27 +1,30 @@
-import React from 'react'
-import Home from './pages/Home'
-import Product1 from './pages/Product1'
-import Blogs from './pages/Blogs'
-import Collection from './pages/Collection'
-import { Routes, Route} from 'react-router-dom'
+import logo from './logo.svg';
+import './App.css';
+import Cate from './Jewelleryweb/Cate';
+import Trandingproduct from './Jewelleryweb/Trandingproduct';
+import Viewer from './Jewelleryweb/Viewer';
+import News from './Jewelleryweb/News';
+import Poster from './Jewelleryweb/Poster';
+import Navbar from './Jewelleryweb/Navbar';
+import Returnpolicy from './Jewelleryweb/Returnpolicy';
+import Terms from './Jewelleryweb/Terms';
+import Paymentpolicy from './Jewelleryweb/Paymentpolicy';
+
 
 function App() {
   return (
-    <div>
-      {/* <Home /> */}
-      {/* <Product1 /> */}
-        {/* <Collection /> */}
-      {/* <Blogs /> */}
-      {/* <Footer /> */}
-
-      <Routes>
-        <Route path='/' element={<Home />}></Route>
-        <Route path='/product1' element={<Product1 />}></Route>
-        <Route path='/collection' element={<Collection />}></Route>
-        <Route path='/blogs' element={<Blogs />}></Route>
-      </Routes>
+    <div className="">
+       {/* <Cate/>
+       <Trandingproduct/>
+       <Viewer/>
+       <Poster/>
+       <News/> */}
+       {/* <Navbar/> */}
+       {/* <Returnpolicy/> */}
+       <Paymentpolicy/>
+       {/* <Terms/> */}
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
