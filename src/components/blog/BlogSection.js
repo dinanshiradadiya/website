@@ -217,8 +217,8 @@ function BlogSection() {
                       {item.Contain}
                     </Typography>
                   </Box>
-                  <Button id='BTN' sx={{
-                    backgroundColor: "#B2905F", color: "B2905F",border:"1px solid #B2905F" , transition:".5s","&:hover":{
+                  <Button  sx={{
+                    backgroundColor: "#B2905F",  color: "#fff",border:"1px solid #B2905F" , transition:".5s","&:hover":{
                       backgroundColor:"#fff",
                       color:"#B2905F !important"
                     }

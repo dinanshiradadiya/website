@@ -12,7 +12,7 @@ import Drawer from '@mui/material/Drawer';
 import List from '@mui/material/List';
 import ListItemText from '@mui/material/ListItemText';
 import CloseIcon from '@mui/icons-material/Close';
-import { Navigate, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 function SecondHeader(props) {
 
@@ -20,12 +20,12 @@ function SecondHeader(props) {
     const navItems = ['HOME', 'PRODUCT', 'COLLECTION', 'BLOG', 'PAGE'];
     const { window } = props;
     const [mobileOpen, setMobileOpen] = React.useState(false);
+    const navigate = useNavigate()
 
     const handleDrawerToggle = () => {
         setMobileOpen((prevState) => !prevState);
     };
 
-    const navigate = useNavigate()
 
     const drawer = (
         <Box onClick={handleDrawerToggle} sx={{ textAlign: 'end', padding: "10px" }}>
