@@ -18,6 +18,7 @@ function CollectionSection() {
                             </Typography>
                         </Box>
                     </Container>
+                    
 
                 </Box>
                    
