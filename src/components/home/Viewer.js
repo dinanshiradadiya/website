@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import { Avatar, Box, Container, Stack, Typography, Button } from '@mui/material';
+import { Box, Container, Stack, Typography, } from '@mui/material';
 import Rating from '@mui/material/Rating';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
@@ -9,7 +9,6 @@ import sliderImg2 from "../../assets/images/home/slider/sliderImg_2.png";
 import sliderImg3 from "../../assets/images/home/slider/sliderImg_3.png";
 import EastIcon from '@mui/icons-material/East';
 import KeyboardBackspaceIcon from '@mui/icons-material/KeyboardBackspace';
-import { useNavigate } from 'react-router-dom';
 
 function Viewer() {
     const sliderRef = useRef(null);
@@ -57,7 +56,8 @@ function Viewer() {
 
     return (
         <div>
-            <Box textAlign={"center"} display={'flex'} justifyContent={'center'} marginTop={10} paddingTop={"100px"} gap={2}>
+          <Container maxWidth>
+          <Box textAlign={"center"} display={'flex'} justifyContent={'center'} marginTop={10} paddingTop={"100px"} gap={2}>
                 <Typography sx={{ fontSize: 40, fontWeight: 600 }}>Happy client</Typography>
                 <Typography sx={{ fontSize: 40, fontFamily: "'Marcellus', sans-serif" }}>quotes</Typography>
             </Box>
@@ -75,7 +75,7 @@ function Viewer() {
                 </Typography>
             </Box>
             <Box textAlign={'center'} marginTop={5}>
-                <img src='https://qx-aolie.myshopify.com/cdn/shop/files/quotes-icon.png?v=1696573837&width=832' width={50} height={50} />
+                <img src='https://qx-aolie.myshopify.com/cdn/shop/files/quotes-icon.png?v=1696573837&width=832' alt='' width={50} height={50} />
             </Box>
             <Box>
                 <Stack>
@@ -98,14 +98,15 @@ function Viewer() {
                                     <Typography fontWeight={600}>Store owner</Typography>
                                 </Box>
                             </Slider>
-                            <Box sx={{display:"flex",justifyContent:"space-between",color:"#B2905F",transform:"translateY(-1100%)"}} marginTop={2}>
-                                <Box variant="contained" onClick={previous} sx={{transform:"translateX(-1400%)"}}><KeyboardBackspaceIcon></KeyboardBackspaceIcon></Box>
-                                <Box variant="contained" onClick={next}  sx={{transform:"translateX(1400%)"}}><EastIcon></EastIcon></Box>
+                            <Box sx={{display:"flex",justifyContent:"space-between",color:"#B2905F"}} marginTop={2}>
+                                <Box variant="contained" onClick={previous}><KeyboardBackspaceIcon></KeyboardBackspaceIcon></Box>
+                                <Box variant="contained" onClick={next}><EastIcon></EastIcon></Box>
                             </Box>
                         </Box>
                     </Container>
                 </Stack>
             </Box>
+          </Container>
         </div>
     );
 }

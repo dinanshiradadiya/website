@@ -9,21 +9,22 @@ import ListIcon from "@mui/icons-material/List";
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import Paper from '@mui/material/Paper';
 import { styled } from '@mui/material/styles';
-import collection02 from '../assets/image/product/collection-02.webp'
-import jewellery1 from '../assets/image/product/jewellery-1.webp'
-import jewellery2 from '../assets/image/product/jewellery-2.webp'
-import jewellery3 from '../assets/image/product/jewellery-3.webp'
-import jewellery4 from '../assets/image/product/jewellery-4.webp'
-import jewellery5 from '../assets/image/product/jewellery-5.webp'
-import jewellery6 from '../assets/image/product/jewellery-6.webp'
-import jewellery7 from '../assets/image/product/jewellery-7.webp'
-import jewellery8 from '../assets/image/product/jewellery-8.webp'
-import jewellery9 from '../assets/image/product/jewellery-9.webp'
-import jewellery10 from '../assets/image/product/jewellery-10.webp'
-import jewellery11 from '../assets/image/product/jewellery-11.webp'
-import jewellery12 from '../assets/image/product/jewellery-12.webp'
-import DoneIcon from '@mui/icons-material/Done';
-
+import collection02 from '../../assets/image/product/collection-02.webp'
+import jewellery1 from '../../assets/image/product/jewellery-1.webp'
+import jewellery2 from '../../assets/image/product/jewellery-2.webp'
+import jewellery3 from '../../assets/image/product/jewellery-3.webp'
+import jewellery4 from '../../assets/image/product/jewellery-4.webp'
+import jewellery5 from '../../assets/image/product/jewellery-5.webp'
+import jewellery6 from '../../assets/image/product/jewellery-6.webp'
+import jewellery7 from '../../assets/image/product/jewellery-7.webp'
+import jewellery8 from '../../assets/image/product/jewellery-8.webp'
+import jewellery9 from '../../assets/image/product/jewellery-9.webp'
+import jewellery10 from '../../assets/image/product/jewellery-10.webp'
+import jewellery11 from '../../assets/image/product/jewellery-11.webp'
+import jewellery12 from '../../assets/image/product/jewellery-12.webp'
+import VisibilityIcon from '@mui/icons-material/Visibility';
+import LocalMallIcon from '@mui/icons-material/LocalMall';
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 const itemList = [
   {
     list: "Bestseller",
@@ -435,12 +436,20 @@ function Product() {
                             width: '100%',
                           }}
                         />
+
                          <Box py={3} sx={{backgroundColor:"white"}}>
                          <Typography sx={{color: "#333333", fontFamily: "Manrope,sans-serif",textAlign:"center",fontWeight:"700","&:hover":{color:"#B2905F"}}}>{item.name}</Typography>
                          <Box display={"flex"} alignItems={"center"} gap={1} justifyContent={"center"}>
                          <Typography py={1} sx={{ fontFamily: "Manrope,sans-serif",textAlign:"center",fontWeight:"700",color:"#B2905F"}}>{item.price}</Typography>
                          <Typography sx={{ fontFamily: "Manrope,sans-serif",textAlign:"center",fontWeight:"700",color:"#808080"}}> ~ <s>{item.price2}</s></Typography>
                          </Box>
+                            <Box sx={{display:"flex",justifyContent:"center"}}  >
+                                 <Box sx={{backgroundColor:{xs:"#F8F6F1",sm:"#F8F6F1",md:"#F8F6F1",lg:"white"},display:"flex"}} py={2} gap={4} px={2}>
+                                 <VisibilityIcon sx={{color:"#808080",display:{xs:"block",sm:"block",md:"block",lg:"none"}}}/> 
+                                 <LocalMallIcon sx={{color:"#808080",display:{xs:"block",sm:"block",md:"block",lg:"none"}}}/>
+                                 <FavoriteBorderIcon sx={{color:"#808080",display:{xs:"block",sm:"block",md:"block",lg:"none"}}}/>
+                                 </Box>
+                            </Box>
                          </Box>
                       </Box>
                       </Grid>
