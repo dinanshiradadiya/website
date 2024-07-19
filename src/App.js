@@ -4,7 +4,6 @@ import Productprops from './component/Productprops'
 import Productdescreption from './component/Productdescreption'
 import Reletedproduct from './component/Reletedproduct'
 import { Route, Routes } from 'react-router-dom'
-// import { Collections, Home } from '@mui/icons-material'
 import Product1 from './pages/Product1'
 import Home from "./pages/Home"
 import Collections  from './pages/Collection'
